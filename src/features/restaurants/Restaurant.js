@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 function Restaurant({ restaurant }) {
 
   const dispatch = useDispatch()
-  
+
   const handleDelete = () => {
     dispatch(restaurantRemoved(restaurant.id))
   }
@@ -16,7 +16,7 @@ function Restaurant({ restaurant }) {
       <li>
         {restaurant.name}
         <button onClick={handleDelete}> Delete Restaurant </button>
-        <ReviewsContainer restaurant={restaurant} />
+        <ReviewsContainer restaurantId={restaurant.id} />
       </li>
     </div>
   );

@@ -13,7 +13,6 @@ function RestaurantInput() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log(newRestaurant)
     dispatch(restaurantAdded(newRestaurant))
   }
 
